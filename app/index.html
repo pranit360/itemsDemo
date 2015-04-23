@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<html ng-app="myApp" ng-controller="AppCtrl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body style="font-family:andalus;font-size: medium;">
+<div ng-controller="AppCtrl">
+<h1>Simple Angular Startup Project</h1>
+<div class="container">
+  <div class="navbar navbar-default">
+    <div class="navbar-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+        <li class="alert-info"><a href="#/allItems">Access BasketOne</a></li>
+        <li class="alert-success"><a href="#/addItem">Add Item To BasketOne</a></li>
+        <li class="alert-info"><a href="#/allItems2">Access BasketTwo</a></li>
+        <li class="alert-success"><a href="#/addItem2">Add Item To BasketTwo</a></li>
+
+
+      </ul>
+    </div>
+  </div>
+  <!--the following directive ng-view helps put all our views here -->
+  <div ng-view="ng-view"></div>
+</div>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!--<div ng-view></div>  -->
+
+  <div>Angular seed app: v<span app-version></span></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+<script type="text/javascript" src="./lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript"  src="./lib/angular/angular.js"></script>
+<script type="text/javascript"  src="./lib/angular-loader/angular-loader.js"></script>
+<script type="text/javascript"  src="./lib/angular-route/angular-route.min.js"></script>
+<link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css"/>
+<link rel="stylesheet" href="app.css">
+<script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+<script src="components/version/controllers.js"></script>
+  <script src="components/version/factories.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</div>
+</body>
+</html>

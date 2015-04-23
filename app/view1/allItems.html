@@ -1,0 +1,36 @@
+<!--this html file is the beauty behind the main view for basket one, similar file for basket two also exists-->
+
+<div row>
+    <div class="col-md-9">
+        <h3>Basket ONE</h3>
+        <table class="table">
+            <thead>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+            </thead>
+            <tbody>
+            <tr ng-repeat="i in itemList()" ng-model="item">
+                <td><a href="#/item/{{i.name}}">{{ getSerialValue(i.name)}}</a></td>
+                <td>{{i.name}}</td>
+
+                <td ng-model="number">{{i.value}}</td>
+                <td ng-model="qty">{{i.qty}}</td>
+                <td ng-model="number">{{ getSubTotal(getSerialValue(i.name))}}</td>
+                <td><a href="#/allItems" ng-click="delItems(i.name)">Delete</a></td>
+                <td><a href="#/addItem/{{i.name}}">Edit</a></td>
+            </tr>
+            <tr>
+                <td>Total value of items:   {{ getTotal() }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <button><a href="#/printViewBasOne">Print Basket</a></button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

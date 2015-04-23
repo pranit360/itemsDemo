@@ -1,0 +1,24 @@
+
+<!-- all html files are the beauty behind everything -->
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td><input type="text" placeholder="Enter name" ng-model="foundItem.name"></td>
+    </tr>
+    <tr>
+        <td>Value</td>
+        <td><input type="number" placeholder="Enter price" ng-model="foundItem.value" id="value"></td>
+    </tr>
+    <tr>
+        <td>Quantity</td>
+        <td><input type="number" placeholder="Enter quantity" ng-model="foundItem.qty" id="quantity"></td>
+    </tr>
+    <tr>
+        <td>
+            <!-- function addEditItem(item) from the app.js file is invoked below -->
+            <button type="submit" ng-click="addEditItem(foundItem)"><a href="#/allItems">Enter</a></button>
+        </td>
+    </tr>
+</table>
+

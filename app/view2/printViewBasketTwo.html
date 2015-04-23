@@ -1,0 +1,33 @@
+<fieldset class="scheduler-border">
+    <legend class="scheduler-border"><h1>Basket two</h1></legend>
+    <div row>
+        <div class="col-md-9">
+            <table class="table">
+                <thead>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Sub Total</th>
+                </thead>
+                <tbody>
+                <tr ng-repeat="i in itemList2()" ng-model="item">
+                    <td><a href="#/item2/{{i.name}}">{{ getSerialValueA(i.name)}}</a></td>
+                    <td>{{i.name}}</td>
+
+                    <td ng-model="number">{{i.value}}</td>
+                    <td ng-model="qty">{{i.qty}}</td>
+                    <td ng-model="number">{{ getSubTotalA(getSerialValueA(i.name))}}</td>
+                </tr>
+                <tr>
+                    <td>Total value of items:   {{ getTotalA() }}</td>
+                </tr>
+
+                <tr>
+                    <td>(Ctrl+p)</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</fieldset>

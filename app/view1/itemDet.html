@@ -1,0 +1,22 @@
+<body>
+<fieldset class="scheduler-border">
+    <legend class="scheduler-border"><h1>Item details</h1></legend>
+    <div row>
+        <div class="col-md-9">
+            <h1>Item ID:{{getSerialValue(foundItem.name)}}</h1><br>
+            <table class="table">
+                <thead>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Sub Total</th>                </thead>
+                <tr>
+                    <td>{{foundItem.name}}</td>
+                    <td>{{foundItem.value}}</td>
+                    <td>{{foundItem.qty}}</td>
+                    <td>{{ getSubTotal(getSerialValue(foundItem.name))}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</fieldset>
